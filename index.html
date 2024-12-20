@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="شركة المصطفى للتكييف والتبريد، نقدم خدمات صيانة وتركيب المكيفات بجودة عالية وبأسعار منافسة.">
+    <meta name="keywords" content="تكييف، تبريد، صيانة، تركيب مكيفات، صيانة تكييف، المصطفى للتكييف">
+    <meta name="author" content="المصطفى للتكييف">
+    <meta property="og:title" content="المصطفى للتكييف والتبريد">
+    <meta property="og:description" content="أفضل خدمات صيانة وتركيب المكيفات، لن تجد أفضل من المصطفى في مجال التكييف.">
+    <meta property="og:image" content="رابط صورة مميزة للصفحة">
+    <meta property="og:url" content="رابط الصفحة هنا">
+    <meta name="robots" content="index, follow">
+    <title>المصطفى للتكييف والتبريد</title>
+
+    <!-- إضافة مكتبات Bootstrap و Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #1E3A8A;
+            --secondary-color: #3B82F6;
+            --accent-color: #2563EB;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/api/placeholder/1920/400') center/cover;
+            opacity: 0.1;
+        }
+
+        .main-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .contact-info {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .contact-info i {
+            margin-left: 10px;
+            font-size: 24px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card .card-img-top {
+            border-radius: 15px 15px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card .card-body {
+            padding: 25px;
+        }
+
+        .service-card .card-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .features-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-icon {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <h1>المصطفى للتكييف والتبريد</h1>
+            <p class="lead">خبراء في صيانة وتركيب جميع أنواع المكيفات</p>
+
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="container my-5">
+        <h2 class="section-title">خدماتنا</h2>
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h5 class="card-title">صيانة وإصلاح التكييفات</h5>
+                        <p class="card-text">صيانة شاملة لجميع أنواع المكيفات مع ضمان الجودة والكفاءة</p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                            data-bs-target="#modal1">التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-air-conditioner"></i>
+                        </div>
+                        <h5 class="card-title">تركيب مكيفات جديدة</h5>
+                        <p class="card-text">تركيب احترافي لجميع أنواع المكيفات مع ضمان التركيب</p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                            data-bs-target="#modal2">التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h5 class="card-title">تنظيف وصيانة دورية</h5>
+                        <p class="card-text">خدمات تنظيف وصيانة دورية للحفاظ على كفاءة المكيف</p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                            data-bs-target="#modal3">التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h5 class="card-title">فحص وكشف الأعطال</h5>
+                        <p class="card-text">فحص شامل وتشخيص دقيق لجميع مشاكل التكييف</p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                            data-bs-target="#modal4">التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5 class="card-title">توفير قطع غيار أصلية</h5>
+                        <p class="card-text">قطع غيار أصلية لجميع أنواع المكيفات مع ضمان</p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                            data-bs-target="#modal5">التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h5 class="card-title">خدمات طوارئ 24/7</h5>
+                        <p class="card-text">خدمة صيانة طارئة على مدار الساعة طوال أيام الأسبوع</p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal"
+                            data-bs-target="#modal6">التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">لماذا تختار المصطفى للتكييف؟</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>خبرة طويلة</h4>
+                        <p>أكثر من 15 عامًا من الخبرة في مجال التكييف</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>فنيين محترفين</h4>
+                        <p>فريق من الفنيين المعتمدين وذوي الخبرة</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>ضمان الخدمة</h4>
+                        <p>نقدم ضمان شامل على جميع خدماتنا وقطع الغيار</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="mb-4">احصل على خدماتنا الآن</h2>
+            <p class="lead mb-4">نصلك أينما كنت في أسرع وقت ممكن</p>
+            <a href="tel:+966568398510" class="btn btn-light btn-lg">
+                <i class="fas fa-phone-alt ms-2"></i>
+                اتصل بنا الآن
+            </a>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Modal 1: صيانة وإصلاح -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">صيانة وإصلاح التكييفات</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>خدماتنا تشمل:</h5>
+                    <ul>
+                        <li>فحص شامل لنظام التكييف</li>
+                        <li>إصلاح جميع الأعطال الفنية</li>
+                        <li>تنظيف وتعقيم الوحدات</li>
+                        <li>فحص مستوى غاز التبريد</li>
+                        <li>صيانة القطع الكهربائية</li>
+                        <li>ضمان على جميع الإصلاحات</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <a href="tel:+966568398510" class="btn btn-primary">اتصل الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: تركيب مكيفات -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تركيب مكيفات جديدة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>مميزات خدمة التركيب:</h5>
+                    <ul>
+                        <li>تركيب احترافي لجميع أنواع المكيفات</li>
+                        <li>استشارة فنية لاختيار المكيف المناسب</li>
+                        <li>تركيب مواسير النحاس والعوازل</li>
+                        <li>توصيل الكهرباء بشكل آمن</li>
+                        <li>اختبار الأداء وضمان الكفاءة</li>
+                        <li>ضمان شامل على التركيب</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <a href="tel:+966568398510" class="btn btn-primary">اتصل الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: تنظيف وصيانة -->
+    <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تنظيف وصيانة دورية</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>خدمات التنظيف والصيانة:</h5>
+                    <ul>
+                        <li>تنظيف الفلاتر والمبخرات</li>
+                        <li>تطهير وتعقيم الوحدات</li>
+                        <li>فحص مستوى غاز التبريد</li>
+                        <li>تنظيف مجاري التصريف</li>
+                        <li>فحص الأجزاء الكهربائية</li>
+                        <li>عقود صيانة دورية</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <a href="tel:+966568398510" class="btn btn-primary">اتصل الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: فحص وكشف -->
+    <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">فحص وكشف الأعطال</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>خدمات الفحص تشمل:</h5>
+                    <ul>
+                        <li>فحص شامل لنظام التكييف</li>
+                        <li>تشخيص المشاكل بدقة</li>
+                        <li>فحص الدوائر الكهربائية</li>
+                        <li>قياس كفاءة التبريد</li>
+                        <li>فحص مستوى الضوضاء</li>
+                        <li>تقرير فني مفصل</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <a href="tel:+966568398510" class="btn btn-primary">اتصل الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: قطع غيار -->
+    <div class="modal fade" id="modal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">توفير قطع غيار أصلية</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>مميزات قطع الغيار:</h5>
+                    <ul>
+                        <li>قطع غيار أصلية معتمدة</li>
+                        <li>ضمان على جميع القطع</li>
+                        <li>توفر دائم للقطع الأساسية</li>
+                        <li>أسعار منافسة</li>
+                        <li>خدمة توصيل للورش</li>
+                        <li>دعم فني متخصص</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <a href="tel:+966568398510" class="btn btn-primary">اتصل الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: خدمات طوارئ -->
+    <div class="modal fade" id="modal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">خدمات طوارئ 24/7</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>مميزات خدمة الطوارئ:</h5>
+                    <ul>
+                        <li>متوفرون 24 ساعة</li>
+                        <li>استجابة سريعة</li>
+                        <li>فريق فني متخصص</li>
+                        <li>تغطية جميع المناطق</li>
+                        <li>حل سريع للمشاكل الطارئة</li>
+                        <li>أسعار منافسة للطوارئ</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <a href="tel:+966568398510" class="btn btn-primary">اتصل الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/966568398510" class="whatsapp-float">
+        <i class="fab fa-whatsapp ms-2"></i>
+        تواصل عبر واتساب
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-end">
+                    <h4>تواصل معنا</h4>
+                    <p>
+                        <i class="fas fa-phone-alt ms-2"></i>
+                        <a href="tel:+966568398510" class="text-white text-decoration-none">568398510</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt ms-2"></i>
+                        المملكة العربية السعودية
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <h4>تابعنا على</h4>
+                    <div class="social-links mt-3">
+
+                        <a href="https://wa.me/966568398510"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>© 2024 المصطفى للتكييف والتبريد - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
